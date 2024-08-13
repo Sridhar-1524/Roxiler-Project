@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions Dashboard</title>
+    <link rel="stylesheet" href="f.css">
+    <script src="frontend/f.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Transactions Dashboard</h1>
+        <div class="controls">
+            <label for="month-select">Select Month:</label>
+            <select id="month-select">
+                <option value="2024-01">January</option>
+                <option value="2024-02">February</option>
+                <option value="2024-03" selected>March</option>
+                <option value="2024-04">April</option>
+                <option value="2024-05">May</option>
+                <option value="2024-06">June</option>
+                <option value="2024-07">July</option>
+                <option value="2024-08">August</option>
+                <option value="2024-09">September</option>
+                <option value="2024-10">October</option>
+                <option value="2024-11">November</option>
+                <option value="2024-12">December</option>
+            </select>
+            <input type="text" id="search-box" placeholder="Search transactions">
+        </div>
+
+        <table id="transactions-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transactions will be dynamically inserted here -->
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <button id="prev-page">Previous</button>
+            <button id="next-page">Next</button>
+        </div>
+
+        <div class="statistics">
+            <h2>Statistics</h2>
+            <p>Total Sale Amount: <span id="total-sale-amount"></span></p>
+            <p>Total Sold Items: <span id="total-sold-items"></span></p>
+            <p>Total Not Sold Items: <span id="total-not-sold-items"></span></p>
+        </div>
+
+        <div class="charts">
+            <h2>Bar Chart</h2>
+            <canvas id="bar-chart"></canvas>
+            <h2>Pie Chart</h2>
+            <canvas id="pie-chart"></canvas>
+        </div>
+    </div>
+</body>
+</html>
